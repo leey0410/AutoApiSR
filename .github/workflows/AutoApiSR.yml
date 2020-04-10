@@ -35,6 +35,7 @@ jobs:
       run: | 
         echo $CONFIG_ID > configid.txt
         echo $CONFIG_KEY > configkey.txt
+        echo $CONFIG_KEY
         sed -i '10 r configid.txt' 1.py
         sed -i '12 r configkey.txt' 1.py
     - name: Test Api #Api调用
